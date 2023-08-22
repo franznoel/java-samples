@@ -5,14 +5,11 @@ public class PangramChecker {
   }
 
   public boolean check(String sentence) {
-    boolean isPangram = false;
     for (char c = 'a'; c <= 'z'; c++) {
       if (!sentence.toLowerCase().contains("" + c)) {
-        isPangram = false;
-      } else {
-        isPangram = true;
+        return false;
       }
     }
-    return isPangram;
+    return true;
   }
 }
